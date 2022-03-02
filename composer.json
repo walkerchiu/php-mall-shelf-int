@@ -1,0 +1,45 @@
+{
+    "name": "walkerchiu/php-mall-shelf-int",
+    "type": "library",
+    "authors": [
+        {
+            "name":  "Walker Chiu",
+            "email": "chenjen.chiou@gmail.com"
+        }
+    ],
+    "license": "MIT",
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "require": {
+        "php": "^7.3",
+        "walkerchiu/php-core-int": "^1.0",
+        "walkerchiu/php-morph-comment-int": "^1.0",
+        "walkerchiu/php-morph-image-int": "^1.0",
+        "walkerchiu/php-morph-tag-int": "^1.0"
+    },
+    "suggest": {
+        "walkerchiu/php-site-int": "^1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "WalkerChiu\\MallShelf\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "WalkerChiu\\MallShelf\\MallShelfServiceProvider"
+            ],
+            "aliases": {
+                "Catalog":  "WalkerChiu\\MallShelf\\Models\\Entities\\Catalog",
+                "Product":  "WalkerChiu\\MallShelf\\Models\\Entities\\Product",
+                "Stock":    "WalkerChiu\\MallShelf\\Models\\Entities\\Stock"
+            }
+        }
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "preferred-install": "dist",
+        "sort-packages": true
+    }
+}
